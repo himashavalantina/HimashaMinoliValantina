@@ -119,21 +119,21 @@ export function EducationAndMore() {
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600"></div>
               <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              <div className="flex flex-col md:flex-row items-start gap-6 relative z-10">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative z-10">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="bg-gradient-to-br from-blue-100 to-cyan-100 p-4 rounded-2xl shadow-lg"
                 >
                   <GraduationCap className="h-10 w-10 text-blue-600" />
                 </motion.div>
-                <div className="flex-1">
+                <div className="flex-1 text-center md:text-left">
                   <h3 className="text-3xl mb-2 bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
                     Bachelor of Science in Computer Science
                   </h3>
                   <p className="text-xl text-blue-600 mb-2">
                     Sri Lanka Institute of Information Technology (SLIIT)
                   </p>
-                  <div className="flex items-center gap-2 mb-6">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
                     <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">
                       Currently Pursuing
                     </Badge>
@@ -143,11 +143,11 @@ export function EducationAndMore() {
                   </div>
 
                   <div className="mt-6">
-                    <h4 className="text-sm font-semibold text-slate-700 mb-4 flex items-center gap-2">
+                    <h4 className="text-sm font-semibold text-slate-700 mb-4 flex items-center justify-center md:justify-start gap-2">
                       <Sparkle className="h-4 w-4 text-blue-600" />
                       Relevant Coursework
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2">
                       {[
                         "Data Structures & Algorithms",
                         "Database Management Systems",
@@ -352,8 +352,8 @@ export function EducationAndMore() {
             <Card className="p-4 md:p-10 shadow-xl border-0 bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"></div>
 
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-4">
+              <div className="relative z-10 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                   <TrendingUp className="h-6 w-6 text-purple-600" />
                   <h3 className="text-2xl text-purple-900">Seeking Internship Opportunities</h3>
                 </div>
