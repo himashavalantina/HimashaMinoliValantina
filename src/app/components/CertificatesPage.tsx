@@ -177,7 +177,7 @@ export function CertificatesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent mb-4">
               Professional Certifications & Achievements
             </h1>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
