@@ -61,9 +61,9 @@ export function Hero() {
                 </p>
               </div>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-lg">
-                Undergraduate at <span className="text-blue-400 font-semibold">SLIIT</span> | Passionate about 
-                <span className="text-cyan-400 font-semibold"> AI</span>, 
-                <span className="text-purple-400 font-semibold"> Software Development</span> & 
+                Undergraduate at <span className="text-blue-400 font-semibold">SLIIT</span> | Passionate about
+                <span className="text-cyan-400 font-semibold"> AI/ML Engineering </span>,
+                <span className="text-purple-400 font-semibold"> FullStack Software Development</span> &
                 <span className="text-blue-400 font-semibold"> Innovation</span>
               </p>
             </motion.div>
