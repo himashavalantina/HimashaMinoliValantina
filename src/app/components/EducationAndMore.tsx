@@ -3,11 +3,10 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
-// Update all imports in CertificatesPage.tsx to use "../../assets/cetificates/"
 import uiux from "../../assets/cetificates/uiux.png";
 import hackathon from "../../assets/cetificates/mora.png";
 import aiml1 from "../../assets/cetificates/aiml1.png";
-import { useNavigate } from "react-router-dom"; // Already imported
+import { useNavigate } from "react-router-dom";
 
 interface Certificate {
   title: string;
@@ -23,7 +22,6 @@ interface Certificate {
   delay: number;
 }
 
-// Updated certificate data with more professional details
 const certificates: Certificate[] = [
   {
     title: "AI/ML Engineer Certification",
@@ -89,7 +87,7 @@ export function EducationAndMore() {
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Education Section - Fixed alignment */}
+        {/* Education Section - Fixed alignment and centered on mobile */}
         <div className="mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +95,7 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-2 rounded-lg">
                 <GraduationCap className="h-6 w-6 text-white" />
               </div>
@@ -105,7 +103,7 @@ export function EducationAndMore() {
                 Education
               </h2>
             </div>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-600 mb-12 rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-600 mb-12 rounded-full mx-auto md:mx-0"></div>
           </motion.div>
 
           <motion.div
@@ -125,14 +123,14 @@ export function EducationAndMore() {
                 >
                   <GraduationCap className="h-10 w-10 text-blue-600" />
                 </motion.div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-3xl mb-2 bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
+                <div className="flex-1 w-full">
+                  <h3 className="text-2xl md:text-3xl mb-2 bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent text-center md:text-left">
                     Bachelor of Science in Computer Science
                   </h3>
-                  <p className="text-xl text-blue-600 mb-2">
+                  <p className="text-lg md:text-xl text-blue-600 mb-2 text-center md:text-left">
                     Sri Lanka Institute of Information Technology (SLIIT)
                   </p>
-                  <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-6">
                     <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">
                       Currently Pursuing
                     </Badge>
@@ -199,8 +197,8 @@ export function EducationAndMore() {
             </div>
           </motion.div>
 
-          {/* Featured Certificates Grid - Enhanced Design */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-12">
+          {/* Featured Certificates Grid - Made cards smaller and improved mobile layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
             {certificates.map((cert) => (
               <motion.div
                 key={cert.title}
@@ -208,34 +206,35 @@ export function EducationAndMore() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: cert.delay }}
+                className="h-full"
               >
                 <Card className="overflow-hidden border-0 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 group h-full flex flex-col">
-                  {/* Certificate Header */}
-                  <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${cert.color} p-6`}>
+                  {/* Certificate Header - Reduced height */}
+                  <div className={`relative h-32 overflow-hidden bg-gradient-to-br ${cert.color} p-5`}>
                     <div className="absolute inset-0 bg-black/10"></div>
                     <div className="relative z-10 flex items-start justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
+                      <div className="flex items-center gap-3 max-w-[80%]">
+                        <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm shrink-0">
                           {cert.icon}
                         </div>
-                        <div>
-                          <Badge className="bg-white/20 backdrop-blur-sm text-white border-0 text-xs">
+                        <div className="overflow-hidden">
+                          <Badge className="bg-white/20 backdrop-blur-sm text-white border-0 text-xs mb-1">
                             {cert.category}
                           </Badge>
-                          <h3 className="text-xl font-bold text-white mt-2">{cert.title}</h3>
+                          <h3 className="text-lg font-bold text-white truncate">{cert.title}</h3>
                         </div>
                       </div>
-                      <Shield className="h-8 w-8 text-white/30" />
+                      <Shield className="h-6 w-6 text-white/30 shrink-0" />
                     </div>
                   </div>
 
-                  {/* Certificate Content */}
-                  <div className="p-6 flex-1 flex flex-col">
+                  {/* Certificate Content - Reduced padding */}
+                  <div className="p-4 md:p-5 flex-1 flex flex-col">
                     {/* Issuer and Date */}
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 gap-2">
                       <div className="flex items-center gap-2">
-                        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-slate-100 to-slate-200 flex items-center justify-center">
-                          <Calendar className="h-4 w-4 text-slate-600" />
+                        <div className="h-7 w-7 rounded-full bg-gradient-to-r from-slate-100 to-slate-200 flex items-center justify-center shrink-0">
+                          <Calendar className="h-3.5 w-3.5 text-slate-600" />
                         </div>
                         <div>
                           <div className="text-xs text-slate-500">Issued</div>
@@ -248,19 +247,19 @@ export function EducationAndMore() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6 flex-1">
+                    <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1 line-clamp-3">
                       {cert.description}
                     </p>
 
                     {/* Key Achievements */}
                     {cert.achievements && (
-                      <div className="mb-6">
-                        <div className="text-xs font-semibold text-slate-700 mb-2">Key Achievements:</div>
+                      <div className="mb-4">
+                        <div className="text-xs font-semibold text-slate-700 mb-1">Key Achievements:</div>
                         <div className="space-y-1">
                           {cert.achievements.map((achievement, idx) => (
                             <div key={idx} className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400"></div>
-                              <span className="text-xs text-slate-600">{achievement}</span>
+                              <div className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 shrink-0"></div>
+                              <span className="text-xs text-slate-600 truncate">{achievement}</span>
                             </div>
                           ))}
                         </div>
@@ -268,17 +267,17 @@ export function EducationAndMore() {
                     )}
 
                     {/* Action Buttons */}
-                    <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={() => window.open(cert.image, '_blank')}
-                        className="text-slate-600 hover:text-slate-900 w-full sm:w-auto"
+                        className="text-slate-600 hover:text-slate-900 w-full sm:w-auto text-xs px-2"
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
+                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
                         View Certificate
                       </Button>
-                      <Badge className={`bg-gradient-to-r ${cert.color} text-white border-0 self-start sm:self-center`}>
+                      <Badge className={`bg-gradient-to-r ${cert.color} text-white border-0 self-start sm:self-center text-xs`}>
                         Verified
                       </Badge>
                     </div>
@@ -295,17 +294,17 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Card className="p-8 border-0 bg-gradient-to-br from-slate-50 to-white shadow-lg">
+            <Card className="p-6 md:p-8 border-0 bg-gradient-to-br from-slate-50 to-white shadow-lg">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-3 rounded-xl shadow-lg">
-                    <Award className="h-8 w-8 text-white" />
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-3 rounded-xl shadow-lg shrink-0">
+                    <Award className="h-6 w-6 md:h-8 md:w-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
                       Continuous Professional Development
                     </h3>
-                    <p className="text-slate-600">
+                    <p className="text-sm md:text-base text-slate-600">
                       These certifications represent ongoing commitment to learning and skill development in
                       cutting-edge technologies, preparing for advanced roles in software engineering and AI development.
                     </p>
@@ -313,7 +312,7 @@ export function EducationAndMore() {
                 </div>
                 <Button
                   onClick={handleViewAllCertificates}
-                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
+                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all whitespace-nowrap mt-4 md:mt-0"
                 >
                   View All Credentials
                   <ChevronRight className="ml-2 h-4 w-4" />
@@ -331,7 +330,7 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-2 rounded-lg">
                 <Briefcase className="h-6 w-6 text-white" />
               </div>
@@ -339,7 +338,7 @@ export function EducationAndMore() {
                 Work Experience
               </h2>
             </div>
-            <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-pink-600 mb-12 rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-pink-600 mb-12 rounded-full mx-auto md:mx-0"></div>
           </motion.div>
 
           <motion.div
@@ -379,7 +378,7 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-2 rounded-lg">
                 <BookOpen className="h-6 w-6 text-white" />
               </div>
@@ -387,7 +386,7 @@ export function EducationAndMore() {
                 Additional Activities
               </h2>
             </div>
-            <div className="h-1 w-24 bg-gradient-to-r from-cyan-600 to-blue-600 mb-12 rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-cyan-600 to-blue-600 mb-12 rounded-full mx-auto md:mx-0"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
