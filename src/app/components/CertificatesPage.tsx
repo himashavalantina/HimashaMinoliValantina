@@ -202,7 +202,7 @@ export function CertificatesPage() {
 
 
           {/* All Certificates Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-20">
             {allCertificates.map((cert, index) => (
               <motion.div
                 key={cert.title}
@@ -212,7 +212,7 @@ export function CertificatesPage() {
               >
                 <Card className="overflow-hidden border-0 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 group h-full flex flex-col">
                   {/* Certificate Header */}
-                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${cert.color} p-6`}>
+                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${cert.color} p-4 md:p-6`}>
                     <div className="absolute inset-0 bg-black/10"></div>
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-white/20 backdrop-blur-sm text-white border-0">

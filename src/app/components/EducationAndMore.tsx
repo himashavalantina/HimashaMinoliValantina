@@ -84,7 +84,7 @@ export function EducationAndMore() {
   };
 
   return (
-    <section id="education" className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section id="education" className="py-24 px-4 md:px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 left-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
@@ -102,7 +102,7 @@ export function EducationAndMore() {
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-2 rounded-lg">
                 <GraduationCap className="h-6 w-6 text-white" />
               </div>
-              <h2 className="text-3xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                 Education
               </h2>
             </div>
@@ -115,7 +115,7 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="p-6 md:p-10 shadow-xl border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
+            <Card className="p-4 md:p-10 shadow-xl border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600"></div>
               <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -189,7 +189,7 @@ export function EducationAndMore() {
                 <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-2 rounded-lg">
                   <Award className="h-6 w-6 text-white" />
                 </div>
-                <h2 className="text-3xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                   Certifications & Achievements
                 </h2>
               </div>
@@ -201,7 +201,7 @@ export function EducationAndMore() {
           </motion.div>
 
           {/* Featured Certificates Grid - Enhanced Design */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-12">
             {certificates.map((cert) => (
               <motion.div
                 key={cert.title}
@@ -336,7 +336,7 @@ export function EducationAndMore() {
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-2 rounded-lg">
                 <Briefcase className="h-6 w-6 text-white" />
               </div>
-              <h2 className="text-3xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                 Work Experience
               </h2>
             </div>
@@ -349,7 +349,7 @@ export function EducationAndMore() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="p-6 md:p-10 shadow-xl border-0 bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
+            <Card className="p-4 md:p-10 shadow-xl border-0 bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"></div>
 
               <div className="relative z-10">
@@ -384,7 +384,7 @@ export function EducationAndMore() {
               <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-2 rounded-lg">
                 <BookOpen className="h-6 w-6 text-white" />
               </div>
-              <h2 className="text-3xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                 Additional Activities
               </h2>
             </div>
