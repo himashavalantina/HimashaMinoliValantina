@@ -1,0 +1,26 @@
+﻿
+> @figma/my-make-file@0.0.1 build
+> vite build
+
+[36mvite v6.3.5 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 2034 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                                    [39m[1m[2m  0.52 kB[22m[1m[22m[2m Γöé gzip:   0.33 kB[22m
+[2mdist/[22m[32massets/ballerina-BI1ty8xx.jpeg                                [39m[1m[2m 52.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/codefest-D2Tdw2Od.png                                  [39m[1m[2m117.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/aiml1-D6ZRa3Yz.png                                     [39m[1m[2m118.74 kB[22m[1m[22m
+[2mdist/[22m[32massets/9e1e53fcd359b64c302256e1c1e038bc4c7cbd44-DpVO_YGR.png  [39m[1m[2m135.12 kB[22m[1m[22m
+[2mdist/[22m[32massets/aiml2-05DE7Zw4.png                                     [39m[1m[2m174.63 kB[22m[1m[22m
+[2mdist/[22m[32massets/mora-Du9Air10.png                                      [39m[1m[2m198.10 kB[22m[1m[22m
+[2mdist/[22m[32massets/serango-D4ae6ORz.jpeg                                  [39m[1m[2m205.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/distributd-BYDCJm5V.png                                [39m[1m[2m292.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/uiux-DpBRLpSv.png                                      [39m[1m[2m323.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/vertex-D_T32Xpu.png                                    [39m[1m[2m396.45 kB[22m[1m[22m
+[2mdist/[22m[32massets/ballerina-pWQjMi7B.png                                 [39m[1m[2m396.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/vibewrite-DIvEQUe2.png                                 [39m[1m[2m406.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/adaptic-Cgr91HRz.png                                   [39m[1m[2m824.21 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-DW-aLcPP.css                                     [39m[1m[2m131.59 kB[22m[1m[22m[2m Γöé gzip:  19.04 kB[22m
+[2mdist/[22m[36massets/index-BBacsvB6.js                                      [39m[1m[2m400.25 kB[22m[1m[22m[2m Γöé gzip: 124.27 kB[22m
+[32mΓ£ô built in 4.39s[39m

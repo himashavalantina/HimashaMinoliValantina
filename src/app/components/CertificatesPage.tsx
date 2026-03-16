@@ -1,8 +1,8 @@
 // src/app/components/CertificatesPage.tsx
 import {
   ArrowLeft, Shield, Calendar, ExternalLink,
-  Award, Sparkle, Trophy, Star, Users,
-  GraduationCap, Briefcase, BookOpen, Lightbulb
+  Award, Sparkle, Trophy, Star, Users, Bot,
+  Lightbulb, Code
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "./ui/card";
@@ -17,6 +17,8 @@ import aiml1 from "../../assets/cetificates/aiml1.png";
 import aiml2 from "../../assets/cetificates/aiml2.png";
 import codefest from "../../assets/cetificates/codefest.png";
 import adaptic from "../../assets/cetificates/adaptic.png";
+import vertex from "../../assets/cetificates/vertex.png";
+import ballerina from "../../assets/cetificates/ballerina.png";
 
 interface Certificate {
   title: string;
@@ -127,6 +129,38 @@ const allCertificates: Certificate[] = [
       "Creative Problem Solving",
       "Design Thinking Process",
       "Prototyping & Wireframing"
+    ],
+  },
+  {
+    title: "Vertex'25 Robotics Workshop",
+    description: "Actively participated in a one-day hands-on robotics workshop organized by the IEEE Robotics and Automation Society (RAS) Student Branch Chapter of IIT. Gained foundational experience through activities involving Arduino, sensors, and team-based challenges.",
+    issuer: "IEEE RAS Student Branch Chapter of IIT",
+    date: "13 December 2025",
+    image: vertex,
+    category: "Workshop & Hands-on Training",
+    color: "from-blue-600 to-cyan-500",
+    icon: <Bot className="h-5 w-5" />,
+    achievements: [
+      "Hands-on with Arduino & Sensors",
+      "Team Challenges in Robotics",
+      "Foundational Robotics Experience",
+      "IEEE RAS Organized Workshop"
+    ],
+  },
+  {
+    title: "Innovate with Ballerina Coding Challenge",
+    description: "Participated in the coding challenge organized by the IEEE Student Branch of the University of Moratuwa in collaboration with WSO2. Engaged in innovative problem-solving using the Ballerina programming language.",
+    issuer: "IEEE Student Branch, University of Moratuwa (in collaboration with WSO2)",
+    date: "19 May - 20 October, 2025",
+    image: ballerina,
+    category: "Hackathon & Challenges",
+    color: "from-green-600 to-emerald-500",
+    icon: <Code className="h-5 w-5" />,
+    achievements: [
+      "Coding & Problem-solving",
+      "Ballerina Programming Language",
+      "IEEE & WSO2 Collaboration",
+      "Extended Coding Challenge"
     ],
   },
 ];
@@ -333,46 +367,14 @@ export function CertificatesPage() {
             </Card>
           </motion.div>
 
-          {/* Download Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <Card className="p-8 border-0 bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-2xl">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-3 rounded-xl shadow-lg">
-                    <Award className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Download Certificate Portfolio
-                    </h3>
-                    <p className="text-slate-300">
-                      Get a complete PDF portfolio of all certifications and achievements for professional reference
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4">
-                  <Button
-                    onClick={() => navigate('/contact')}
-                    className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl"
-                  >
-                    Request Portfolio
-                  </Button>
-                  <Button
-                    onClick={() => navigate('/')}
-                    variant="outline"
-                    className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
-                  >
-                    Back to Home
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
+          <Button
+            onClick={() => navigate('/')}
+            variant="outline"
+            className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
+          >
+            Back to Home
+          </Button>
         </div>
       </div>
 

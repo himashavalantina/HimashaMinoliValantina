@@ -81,7 +81,7 @@ export function EducationAndMore() {
   };
 
   return (
-    <section id="education" className="py-24 px-4 md:px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden max-w-[100vw]">
+    <section id="education" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden w-full">
       {/* Background decoration */}
       <div className="absolute top-20 left-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
@@ -124,10 +124,10 @@ export function EducationAndMore() {
                   <GraduationCap className="h-10 w-10 text-blue-600" />
                 </motion.div>
                 <div className="flex-1 w-full">
-                  <h3 className="text-2xl md:text-3xl mb-2 bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent text-center md:text-left">
+                  <h3 className="text-xl md:text-3xl mb-2 bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent text-center md:text-left">
                     Bachelor of Science in Computer Science
                   </h3>
-                  <p className="text-lg md:text-xl text-blue-600 mb-2 text-center md:text-left">
+                  <p className="text-base md:text-xl text-blue-600 mb-2 text-center md:text-left">
                     Sri Lanka Institute of Information Technology (SLIIT)
                   </p>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-6">
@@ -182,11 +182,11 @@ export function EducationAndMore() {
             transition={{ duration: 0.6 }}
           >
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 mb-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
                 <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-2 rounded-lg">
                   <Award className="h-6 w-6 text-white" />
                 </div>
-                <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent text-center">
                   Certifications & Achievements
                 </h2>
               </div>
@@ -351,14 +351,14 @@ export function EducationAndMore() {
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"></div>
 
               <div className="relative z-10 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mb-4">
                   <TrendingUp className="h-6 w-6 text-purple-600" />
-                  <h3 className="text-2xl text-purple-900">Seeking Internship Opportunities</h3>
+                  <h3 className="text-xl md:text-2xl text-purple-900">Seeking Internship Opportunities</h3>
                 </div>
-                <p className="text-lg text-slate-700 mb-4 leading-relaxed">
+                <p className="text-base md:text-lg text-slate-700 mb-4 leading-relaxed">
                   Currently seeking internship opportunities to apply academic knowledge in professional settings.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                   While I don't have formal work experience yet, my extensive project portfolio demonstrates practical
                   application of software development skills, including full-stack development, AI integration, and
                   database management. Through academic projects and hackathons, I have developed strong problem-solving
@@ -389,7 +389,7 @@ export function EducationAndMore() {
             <div className="h-1 w-24 bg-gradient-to-r from-cyan-600 to-blue-600 mb-12 rounded-full mx-auto md:mx-0"></div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Open Source Contributions",
