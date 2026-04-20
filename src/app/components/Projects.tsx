@@ -7,6 +7,8 @@ import distributedImg from "../../assets/distributd.png";
 import healthVaultImg from "../../assets/ballerina.jpeg";
 import serangoImg from "../../assets/serango.jpeg";
 import vibeWriteImg from "../../assets/vibewrite.png";
+import Optimatch from "../../assets/optimatch.png";
+import insightErpImg from "../../assets/insightErpImg.png";
 
 // Use placeholder images for missing files
 const testLangImg = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop";
@@ -54,6 +56,29 @@ const projects: Project[] = [
     technologies: ["NLP Libraries", "java", "Tailwindcss", "MongoDB", "SpringBoot"],
     githubLink: "https://github.com/Thejandeera/SE-Group4-VibeWrite.git",
     image: vibeWriteImg,
+  },
+  {
+    title: "OptiMatch AI",
+    description: "An AI-driven career companion that uses NLP to match CVs with live global job openings and online courses, featuring a premium Glassmorphism interface.",
+    technologies: ["Scikit-Learn", "Python (Flask)", "Pandas", "Jooble API", "Vanilla CSS3"],
+    githubLink: "https://github.com/himashavalantina/OptiMatch.git",
+    image: Optimatch,
+  },
+  {
+    title: "InsightERP",
+    description: "A cloud-native, role-based Enterprise Resource Planning platform built on a .NET microservices architecture with an Ocelot API Gateway. Features real-time inventory alerts, AI-driven demand forecasting & sales prediction, customer analytics, and multi-role dashboards (Admin, Employee, Manager) — deployed on Azure Container Apps with a fully automated GitHub Actions CI/CD pipeline.",
+    technologies: [
+      ".NET 9 (ASP.NET Core)",
+      "React + Vite",
+      "Ocelot API Gateway",
+      "Azure Container Apps",
+      "Azure SQL Server",
+      "Docker",
+      "GitHub Actions CI/CD",
+      "JWT Auth",
+    ],
+    githubLink: "https://github.com/san-rat/ERP_backend.git",
+    image: insightErpImg,
   },
 ];
 
