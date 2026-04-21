@@ -13,7 +13,7 @@ const skills: Skill[] = [
     category: "Programming Languages",
     items: [
       { name: "Java", level: "Advanced" },
-      { name: "Python", level: "Intermediate" },
+      { name: "Python", level: "Advanced" },
       { name: "JavaScript", level: "Advanced" },
       { name: "TypeScript", level: "Intermediate" },
       { name: "C", level: "Advanced" },
@@ -35,6 +35,7 @@ const skills: Skill[] = [
     category: "Frameworks & Libraries",
     items: [
       { name: "Spring Boot", level: "Advanced" },
+      { name: ".NET" },
       { name: "Maven" },
       { name: "NPM" },
       { name: "Yarn" },
@@ -45,6 +46,7 @@ const skills: Skill[] = [
     items: [
       { name: "MongoDB", level: "Advanced" },
       { name: "SQL Databases", level: "Advanced" },
+      { name: "TSQL Databases", level: "Advanced" },
     ],
   },
   {
@@ -55,6 +57,10 @@ const skills: Skill[] = [
       { name: "Figma" },
       { name: "Arduino" },
       { name: "Jira", level: "Project Management" },
+      { name: "Selenium" },
+      { name: "Docker" },
+      { name: "Confluence" },
+      { name: "Swagger" },
     ],
   },
   {
@@ -104,7 +110,7 @@ export function Skills() {
               <Card className="p-6 h-full hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm group relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-4">
                     <Star className="h-5 w-5 text-blue-600" />

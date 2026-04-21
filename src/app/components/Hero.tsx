@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import profileImage from "../../assets/9e1e53fcd359b64c302256e1c1e038bc4c7cbd44.png";
+import cvFile from "../../assets/Valantina M M H M.pdf";
 
 
 export function Hero() {
@@ -110,10 +111,12 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </Button>
+              <a href={cvFile} download="Valantina M M H M.pdf">
+                <Button className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 text-white px-8 py-6 text-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

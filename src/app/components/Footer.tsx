@@ -25,9 +25,7 @@ export function Footer() {
           <p className="mb-2 text-slate-500">
             © 2026 Himasha Valantina. All rights reserved.
           </p>
-          <p className="text-sm text-slate-600">
-            Built with <span className="text-blue-400">React</span>, <span className="text-blue-400">TypeScript</span>, and <span className="text-cyan-400">Tailwind CSS</span>
-          </p>
+
         </motion.div>
       </div>
     </footer>
