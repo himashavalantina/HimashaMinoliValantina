@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import distributedImg from "../../assets/distributd.png";
-import healthVaultImg from "../../assets/ballerina.jpeg";
+import healthVaultImg from "../../assets/ballerina.png";
 import serangoImg from "../../assets/serango.jpeg";
 import vibeWriteImg from "../../assets/vibewrite.png";
 import Optimatch from "../../assets/optimatch.png";

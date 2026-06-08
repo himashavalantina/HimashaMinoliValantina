@@ -2,8 +2,9 @@
 import {
   ArrowLeft, Shield, Calendar, ExternalLink,
   Award, Sparkle, Trophy, Star, Users, Bot,
-  Lightbulb, Code
+  Lightbulb, Code, Terminal
 } from "lucide-react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -19,6 +20,7 @@ import codefest from "../../assets/cetificates/codefest.png";
 import adaptic from "../../assets/cetificates/adaptic.png";
 import vertex from "../../assets/cetificates/vertex.png";
 import ballerina from "../../assets/cetificates/ballerina.png";
+import prompt from "../../assets/cetificates/prompt.png";
 
 interface Certificate {
   title: string;
@@ -81,6 +83,23 @@ const allCertificates: Certificate[] = [
       "Analytical Thinking & Problem-solving",
       "Competitive Programming Skills",
       "IEEE WIE Organized Event"
+    ],
+  },
+  {
+    title: "The Art of Prompt Engineering",
+    description: "Completed a specialized course on prompt engineering, focusing on crafting effective inputs for AI models. This certification validates foundational skills in guiding artificial intelligence behavior and optimizing AI-driven responses.",
+    issuer: "Cognitive Class",
+    date: "Apr 2026",
+    image: prompt,
+    credentialId: "GPXXOTGVEN",
+    category: "Artificial Intelligence",
+    color: "from-purple-600 to-indigo-500",
+    icon: <Terminal className="h-5 w-5" />,
+    achievements: [
+      "Effective Prompt Design Principles",
+      "Context Construction & Role Prompting",
+      "AI Response Optimization",
+      "Interacting with Large Language Models"
     ],
   },
   {
@@ -167,6 +186,10 @@ const allCertificates: Certificate[] = [
 
 export function CertificatesPage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
 
   // Group certificates by category
   const categories = Array.from(new Set(allCertificates.map(cert => cert.category)));
