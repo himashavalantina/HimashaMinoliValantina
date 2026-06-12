@@ -9,6 +9,9 @@ import serangoImg from "../../assets/serango.jpeg";
 import vibeWriteImg from "../../assets/vibewrite.png";
 import Optimatch from "../../assets/optimatch.png";
 import insightErpImg from "../../assets/insightErpImg.png";
+import ecoSyncImg from "../../assets/datastorm.mp4";
+import maze_chase from "../../assets/Group1_MazeChaze.mp4"
+
 
 // Use placeholder images for missing files
 const testLangImg = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop";
@@ -23,18 +26,32 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Distributed File Storage System",
-    description: "A distributed file storage system built with Go, React, TypeScript, and Raft consensus algorithm for high availability and fault tolerance.",
-    technologies: ["Go", "React", "TypeScript", "Raft"],
-    githubLink: "https://www.linkedin.com/posts/himasha-valantina-798a9833b_im-happy-to-share-our-distributed-file-storage-activity-7409159843254706176-ue53?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVpe2QBgy_GPEovx2EnDt5jtAfCV_KpK4E",
-    image: distributedImg,
+    title: "VibeWrite",
+    description: "AI-assisted writing tool that helps generate creative content based on mood and writing style analysis using Python ML libraries.",
+    technologies: ["NLP Libraries", "java", "Tailwindcss", "MongoDB", "SpringBoot"],
+    githubLink: "https://github.com/Thejandeera/SE-Group4-VibeWrite.git",
+    image: vibeWriteImg,
+  },
+  {
+    title: "Maze Chase",
+    description: "An interactive 3D game featuring autonomous AI agents navigating a dynamic maze using the A* Search Algorithm, optimized with custom low-poly 3D modeling and advanced PBR texturing workflows.",
+    technologies: ["Unity 6", "Blender", "C#", "A* Algorithm", "PBR Texturing"],
+    githubLink: "https://github.com/san-rat/maze_chase.git",
+    image: maze_chase,
   },
   {
     title: "Health Vault",
     description: "A secure health record management system using Ballerina language with REST APIs for medical data storage and retrieval.",
     technologies: ["Ballerina", "REST API"],
-    githubLink: "",
+    githubLink: "https://www.linkedin.com/posts/himasha-valantina-798a9833b_innovatewithballerina2025-wso2-ieee-activity-7431898532728692739-F9rS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVpe2QBgy_GPEovx2EnDt5jtAfCV_KpK4E",
     image: healthVaultImg,
+  },
+  {
+    title: "EcoSync",
+    description: "An advanced AIoT energy-saving smart plug and full-stack analytical platform engineered to calculate unconstrained consumer demand potential and optimize regional trade marketing spend allocations using linear programming solvers.",
+    technologies: ["React", "FastAPI", "Python", "PuLP Solver"],
+    githubLink: "https://github.com/himashavalantina/datastorm_Nybble",
+    image: ecoSyncImg,
   },
   {
     title: "SeranGo",
@@ -51,11 +68,11 @@ const projects: Project[] = [
     image: testLangImg, // Using placeholder URL
   },
   {
-    title: "VibeWrite",
-    description: "AI-assisted writing tool that helps generate creative content based on mood and writing style analysis using Python ML libraries.",
-    technologies: ["NLP Libraries", "java", "Tailwindcss", "MongoDB", "SpringBoot"],
-    githubLink: "https://github.com/Thejandeera/SE-Group4-VibeWrite.git",
-    image: vibeWriteImg,
+    title: "Distributed File Storage System",
+    description: "A distributed file storage system built with Go, React, TypeScript, and Raft consensus algorithm for high availability and fault tolerance.",
+    technologies: ["Go", "React", "TypeScript", "Raft"],
+    githubLink: "https://www.linkedin.com/posts/himasha-valantina-798a9833b_im-happy-to-share-our-distributed-file-storage-activity-7409159843254706176-ue53?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVpe2QBgy_GPEovx2EnDt5jtAfCV_KpK4E",
+    image: distributedImg,
   },
   {
     title: "OptiMatch AI",
@@ -118,12 +135,23 @@ export function Projects() {
               <Card className="overflow-hidden border-0 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 group h-full flex flex-col">
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden bg-slate-900">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    fallbackSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
-                  />
+                  {typeof project.image === 'string' && (project.image.endsWith('.mp4') || project.image.includes('.mp4')) ? (
+                    <video
+                      src={project.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      fallbackSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
 
                   {/* Project Title Overlay */}

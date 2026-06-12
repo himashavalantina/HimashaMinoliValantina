@@ -27,7 +27,7 @@ const skills: Skill[] = [
       { name: "HTML" },
       { name: "CSS" },
       { name: "React", level: "Advanced" },
-      { name: "Node.js", level: "Intermediate" },
+      { name: "Node.js" },
       { name: "Tailwind CSS" },
     ],
   },
@@ -61,12 +61,13 @@ const skills: Skill[] = [
       { name: "Docker" },
       { name: "Confluence" },
       { name: "Swagger" },
+      { name: "K6" },
     ],
   },
   {
     category: "Specialized Skills",
     items: [
-      { name: "AI/ML", level: "Intermediate" },
+      { name: "AI/ML" },
       { name: "Gemini API" },
       { name: "Compiler Design" },
       { name: "DSL Development" },
